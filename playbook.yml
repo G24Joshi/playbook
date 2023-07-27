@@ -9,4 +9,6 @@
         state: directory
 
     - name: copy file
-      content: /tmp/data/hellow.html
+      copy:
+        content: "this is my testing play, My name is Ganesh"
+        dest: /tmp/data/hellow.html
