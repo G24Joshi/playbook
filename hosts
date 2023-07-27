@@ -1,2 +1,2 @@
 [web]
-54.252.156.14
+172.31.0.71 ansible_ssh_user=root ansible_ssh_pass=qwer1234

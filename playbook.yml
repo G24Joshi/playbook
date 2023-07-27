@@ -2,17 +2,11 @@
   become_user: root
   become: yes
   gather_facts: yes
-
-#  vars_prompt:
-#  - name: hostvm
-#    prompt: Please type the Server name.
-#    private: false
-
-
   tasks:
-    - name: python --version
-      command: python --version
-      register: value
+    - name: create directory
+      file: 
+        path: /tmp/data
+        state: directory
 
-    - debug:
-        var: value.stderr
+    - name: copy file
+      content: /tmp/data/hellow.html
