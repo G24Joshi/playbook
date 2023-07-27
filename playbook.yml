@@ -1,0 +1,18 @@
+- hosts: web
+  become_user: root
+  become: yes
+  gather_facts: yes
+
+#  vars_prompt:
+#  - name: hostvm
+#    prompt: Please type the Server name.
+#    private: false
+
+
+  tasks:
+    - name: python --version
+      command: python --version
+      register: value
+
+    - debug:
+        var: value.stderr
